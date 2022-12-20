@@ -9,12 +9,11 @@ function revStr(str){
 console.log(revStr('привет'))
 
 //2
-    const numbers = [1, 2, 3, 4, 6, 8, 12];
-    const get = (number) => {
+    const getNumber = function () {
         let meaning = 0
-        for (let i =0; i < number.length; i += 1){
-            meaning += number[i];
+        for (let i =0; i < arguments.length; i += 1){
+            meaning += arguments[i];
         }
-        return meaning / number.length;
+        return meaning / arguments.length;
 }
-console.log(get(numbers));
+console.log(getNumber(1, 3, 4, 5, 9, 12));
